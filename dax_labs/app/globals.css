@@ -1,0 +1,213 @@
+@import "tailwindcss";
+
+:root {
+  /* =============================================
+     COLOR SYSTEM - Light Theme (Black on White)
+     Perfect for Government & Enterprise clients
+     Modify these values to change entire theme
+     ============================================= */
+  
+  /* Background Colors */
+  --color-bg-primary: #ffffff;      /* Main page background - Pure White */
+  --color-bg-secondary: #f8f9fa;    /* Section backgrounds - Very Light Grey */
+  --color-bg-tertiary: #f1f3f4;     /* Card backgrounds - Light Grey */
+  --color-bg-gradient-start: #ffffff;
+  --color-bg-gradient-end: #f8f9fa;
+
+  /* Text Colors */
+  --color-text-primary: #1a1a1a;    /* Main text - Near Black */
+  --color-text-secondary: #4a4a4a;  /* Secondary text - Dark Grey */
+  --color-text-muted: #717171;      /* Muted text - Medium Grey */
+  --color-text-light: #ffffff;      /* Light text for dark backgrounds */
+  --color-text-inverse: #ffffff;    /* Inverse text color */
+
+  /* Accent Colors */
+  --color-accent: #1a1a1a;          /* Primary accent - Black */
+  --color-accent-hover: #000000;    /* Hover state - Pure Black */
+  --color-accent-light: #4a4a4a;    /* Light accent - Dark Grey */
+  --color-accent-subtle: #e5e5e5;   /* Subtle accent - Light Grey */
+
+  /* Border Colors */
+  --color-border: #e5e5e5;          /* Default borders - Light Grey */
+  --color-border-hover: #1a1a1a;    /* Hover borders - Black */
+  --color-border-subtle: #f0f0f0;   /* Subtle borders - Very Light Grey */
+
+  /* Shadow Colors */
+  --shadow-color: rgba(0, 0, 0, 0.08);
+  --shadow-color-hover: rgba(0, 0, 0, 0.15);
+
+  /* Animation timings */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+@theme inline {
+  --color-background: var(--color-bg-primary);
+  --color-foreground: var(--color-text-primary);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  
+  /* Custom color mappings for Tailwind */
+  --color-bg-primary: var(--color-bg-primary);
+  --color-bg-secondary: var(--color-bg-secondary);
+  --color-bg-tertiary: var(--color-bg-tertiary);
+  
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-muted: var(--color-text-muted);
+  
+  --color-accent: var(--color-accent);
+  --color-accent-hover: var(--color-accent-hover);
+  
+  --color-border: var(--color-border);
+  --color-border-hover: var(--color-border-hover);
+}
+
+body {
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-text-muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-secondary);
+}
+
+/* Utility classes for animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes counterUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.6s ease forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.6s ease forwards;
+}
+
+.animate-pulse-slow {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-counter {
+  animation: counterUp 0.8s ease forwards;
+}
+
+/* Staggered animation delays */
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+/* Hover lift effect utility */
+.hover-lift {
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
