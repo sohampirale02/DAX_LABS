@@ -97,6 +97,24 @@ html {
   background: var(--color-text-secondary);
 }
 
+/* Scrollbar for dropdown mega menu - thinner and more subtle */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
 /* Utility classes for animations */
 @keyframes fadeInUp {
   from {

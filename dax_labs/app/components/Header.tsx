@@ -4,15 +4,150 @@ import { useState } from 'react';
 
 const navItems = [
   { name: 'Who We Are', href: '/#who-we-are' },
-  { name: 'Services', href: '/services' },
+  { name: 'Services', href: '/services', hasDropdown: true },
   { name: 'Products', href: '/#products' },
   { name: 'Our Clients', href: '/#clients' },
   { name: 'Resources', href: '/#resources' },
   { name: 'Contact', href: '/#contact' },
 ];
 
+const servicesDropdown = [
+  {
+    category: 'Application Security Assessment',
+    href: '/services#application-security',
+    icon: (
+      <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+    ),
+    services: [
+      'Web Application',
+      'Mobile Apps',
+      'API/Web Services Assessment',
+      'Thick Client / Desktop Application',
+      'Source Code Review',
+      'GIGW Compliance',
+      'Functional & Performance Testing',
+    ],
+  },
+  {
+    category: 'Network Security Assessment',
+    href: '/services#network-security',
+    icon: (
+      <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+      </svg>
+    ),
+    services: [
+      'Network Architecture Review',
+      'Vulnerability Assessment (VAPT)',
+      'External Penetration Testing',
+      'Secure Configuration Audit',
+      'Wireless Security Assessment',
+      'Log Analysis',
+      'OT Security',
+      'Telecom Security',
+    ],
+  },
+  {
+    category: 'Compliance and Data Privacy',
+    href: '/services#compliance',
+    icon: (
+      <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+    services: [
+      'ISO 27001, ISO 27701, ISO 22301',
+      'BFSI (RBI, SEBI, IRDAI)',
+      'AADHAR UIDAI (AUA/ASA)',
+      'CCA (PKI, E-Sign)',
+      'DPDP Act: 2023',
+      'Central Electricity Authority (CEA)',
+      'SOC Operations Center',
+      'SOC Type I and Type II',
+      'DoT Compliance',
+      'Third Party Assessment',
+    ],
+  },
+  {
+    category: 'Red Teaming',
+    href: '/services#red-teaming',
+    icon: (
+      <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+      </svg>
+    ),
+    services: [
+      'Phishing/Vishing Campaign',
+      'Ransomware Readiness',
+      'External Penetration Testing',
+      'Threat Intelligence',
+      'Cyber Security Mock Drills',
+      'DoS / DDoS Assessment',
+      'Tabletop Exercise',
+      'Physical Security',
+    ],
+  },
+  {
+    category: 'IoT Security Assessment',
+    href: '/services#iot-security',
+    icon: (
+      <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+      </svg>
+    ),
+    services: [
+      'IP-Camera Testing',
+      'IoT/Hardware Device Testing',
+    ],
+  },
+  {
+    category: 'Security Operation Center',
+    href: '/services#soc',
+    icon: (
+      <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+      </svg>
+    ),
+    services: [
+      'SOC Designing & Creation',
+      'SOC Consulting',
+      'SOC Operational Services',
+      'SOC as a Service',
+      'Attack Surface Management',
+      'Monitoring and Detection',
+      'Incident Response',
+      'Threat Assessment',
+      'Threat Hunting',
+      'Governance, Risk & Compliance',
+      'Network Security',
+      'Awareness and Training',
+    ],
+  },
+  {
+    category: 'Digital Forensic Services',
+    href: '/services#digital-forensics',
+    icon: (
+      <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+      </svg>
+    ),
+    services: [
+      'Digital Forensic Lab Creation',
+      'Disk Forensics',
+      'Password Cracking',
+      'Image & Video Forensics',
+      'Data Recovery',
+      'Mobile Forensics',
+      'Incident Response',
+    ],
+  },
+];
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--color-bg-primary)]/95 backdrop-blur-sm border-b border-[var(--color-border)]">
@@ -30,14 +165,89 @@ export default function Header() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
+              <div
                 key={item.name}
-                href={item.href}
-                className="relative text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors duration-200 group"
+                className="relative"
+                onMouseEnter={() => item.hasDropdown && setIsServicesDropdownOpen(true)}
+                onMouseLeave={() => item.hasDropdown && setIsServicesDropdownOpen(false)}
               >
-                {item.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[var(--color-accent)] group-hover:w-full transition-all duration-300" />
-              </a>
+                <a
+                  href={item.href}
+                  className="relative text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors duration-200 group inline-flex items-center"
+                >
+                  {item.name}
+                  {item.hasDropdown && (
+                    <svg
+                      className={`ml-1 w-4 h-4 transition-transform duration-200 ${isServicesDropdownOpen ? 'rotate-180' : ''}`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  )}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[var(--color-accent)] group-hover:w-full transition-all duration-300" />
+                </a>
+
+                {/* Services Dropdown Mega Menu */}
+                {item.hasDropdown && (
+                  <div
+                    className={`absolute left-1/2 -translate-x-1/2 top-full w-[900px] transition-all duration-200 ${
+                      isServicesDropdownOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-1'
+                    }`}
+                  >
+                    <div className="bg-[var(--color-bg-primary)] border border-[var(--color-border)] rounded-lg shadow-2xl overflow-hidden">
+                      <div className="grid grid-cols-2 gap-4 p-5 max-h-[560px] overflow-y-auto scrollbar-thin">
+                        {servicesDropdown.map((service) => (
+                          <a
+                            key={service.category}
+                            href={service.href}
+                            className="group flex flex-col p-4 rounded-md hover:bg-[var(--color-bg-secondary)] transition-all duration-200"
+                          >
+                            <div className="flex items-start space-x-3">
+                              <div className="text-[var(--color-accent)] group-hover:text-[var(--color-accent-hover)] transition-colors">
+                                {service.icon}
+                              </div>
+                              <div className="flex-1 min-w-0">
+                                <h4 className="text-sm font-semibold text-[var(--color-text-primary)] group-hover:text-[var(--color-accent)] transition-colors leading-tight">
+                                  {service.category}
+                                </h4>
+                                <ul className="mt-2.5 space-y-1.5">
+                                  {service.services.slice(0, 4).map((subService) => (
+                                    <li
+                                      key={subService}
+                                      className="text-xs text-[var(--color-text-muted)] truncate leading-relaxed"
+                                    >
+                                      • {subService}
+                                    </li>
+                                  ))}
+                                  {service.services.length > 4 && (
+                                    <li className="text-xs text-[var(--color-text-secondary)] font-medium pt-0.5">
+                                      +{service.services.length - 4} more
+                                    </li>
+                                  )}
+                                </ul>
+                              </div>
+                            </div>
+                          </a>
+                        ))}
+                      </div>
+                      {/* View All Link */}
+                      <div className="px-5 py-3.5 bg-[var(--color-bg-secondary)] border-t border-[var(--color-border)]">
+                        <a
+                          href="/services"
+                          className="text-sm font-semibold text-[var(--color-accent)] hover:text-[var(--color-accent-hover)] transition-colors inline-flex items-center group/link"
+                        >
+                          View All Services
+                          <svg className="ml-1.5 w-4 h-4 transform group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
             ))}
           </div>
 
