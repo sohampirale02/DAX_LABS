@@ -13,12 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DAC Security | Advanced Cybersecurity Solutions",
-  description: "Your trusted partner in Cyber Security Services and Solutions. DAC Security empowers your digital future with advanced cybersecurity solutions, building a safer environment for mankind.",
-  keywords: ["cybersecurity", "security services", "managed security", "vulnerability assessment", "cloud security", "compliance", "DAC Security"],
-  authors: [{ name: "DAC Security" }],
+  title: "DAK Security | Advanced Cybersecurity Solutions",
+  description: "Your trusted partner in Cyber Security Services and Solutions. DAK Security empowers your digital future with advanced cybersecurity solutions, building a safer environment for mankind.",
+  keywords: ["cybersecurity", "security services", "managed security", "vulnerability assessment", "cloud security", "compliance", "DAK Security"],
+  authors: [{ name: "DAK Security" }],
   openGraph: {
-    title: "DAC Security | Advanced Cybersecurity Solutions",
+    title: "DAK Security | Advanced Cybersecurity Solutions",
     description: "Your trusted partner in Cyber Security Services and Solutions.",
     type: "website",
   },

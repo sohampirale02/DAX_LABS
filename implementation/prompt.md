@@ -1,4 +1,4 @@
-# DAC Security Website - Context & Guidelines for Agents
+# DAK Security Website - Context & Guidelines for Agents
 
 **Read this first before building any new pages or features.**
 
@@ -6,7 +6,7 @@
 
 ## Project Overview
 
-**Company:** DAC Security  
+**Company:** DAK Security  
 **Industry:** Cybersecurity Services & Solutions  
 **Target Audience:** Government agencies, enterprise clients, BFSI sector  
 **Design Style:** Minimalistic, professional, clean  
@@ -275,7 +275,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 export const metadata = {
-  title: 'Page Title | DAC Security',
+  title: 'Page Title | DAK Security',
   description: 'Page description for SEO',
 };
 
@@ -411,8 +411,8 @@ import Footer from '../components/Footer';
 ## Contact Information (for Contact Page)
 
 ```
-Company: DAC Security
-Email: contact@dacsecurity.com
+Company: DAK Security
+Email: contact@daksecurity.com
 Phone: +91-XXX-XXX-XXXX (placeholder)
 Address: [To be added]
 ```

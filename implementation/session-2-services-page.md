@@ -1,7 +1,7 @@
-# DAC Security Services Page - Implementation Summary
+# DAK Security Services Page - Implementation Summary
 
-**Session Date:** March 8, 2026  
-**Task:** Build Services Page for DAC Security (cloning AKS IT Services structure)  
+**Session Date:** March 8, 2026
+**Task:** Build Services Page for DAK Security (cloning AKS IT Services structure)
 **Reference:** https://www.aksitservices.co.in/
 
 ---
@@ -295,4 +295,4 @@ All components use the existing color system from `globals.css`:
 - Build time: ~6 seconds
 - No errors or warnings
 
-The services page is now fully functional and matches the AKS IT Services structure while maintaining DAC Security's design system.
+The services page is now fully functional and matches the AKS IT Services structure while maintaining DAK Security's design system.

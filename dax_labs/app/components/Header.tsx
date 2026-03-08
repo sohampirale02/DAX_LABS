@@ -157,7 +157,7 @@ export default function Header() {
           <div className="flex-shrink-0">
             <a href="#" className="flex items-center space-x-2">
               <span className="text-xl lg:text-2xl font-bold tracking-tight text-[var(--color-text-primary)]">
-                DAC SECURITY
+                DAK SECURITY
               </span>
             </a>
           </div>

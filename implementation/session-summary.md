@@ -1,14 +1,14 @@
-# DAC Security Homepage - Implementation Summary
+# DAK Security Homepage - Implementation Summary
 
-**Session Date:** March 8, 2026  
-**Project:** DAC Security Website  
+**Session Date:** March 8, 2026
+**Project:** DAK Security Website
 **Location:** `/home/soham/coding/proj/DAX_LABS/dax_labs/`
 
 ---
 
 ## Overview
 
-Built a complete, minimalist homepage for **DAC Security** - a cybersecurity company. The design is inspired by [AKS IT Services](https://www.aksitservices.co.in/) but with a clean, professional **light theme (black text on white background)** perfect for government and enterprise clients.
+Built a complete, minimalist homepage for **DAK Security** - a cybersecurity company. The design is inspired by [AKS IT Services](https://www.aksitservices.co.in/) but with a clean, professional **light theme (black text on white background)** perfect for government and enterprise clients.
 
 ---
 
@@ -49,7 +49,7 @@ dax_labs/app/
 │   ├── CTASection.tsx        # Call-to-action section
 │   └── Footer.tsx            # Multi-column footer
 ├── globals.css               # Updated with CSS color variables
-├── layout.tsx                # Updated metadata for DAC Security
+├── layout.tsx                # Updated metadata for DAK Security
 └── page.tsx                  # Composes all components
 ```
 
@@ -59,7 +59,7 @@ dax_labs/app/
 
 ### 1. Header (`components/Header.tsx`)
 - Fixed navigation with backdrop blur
-- "DAC SECURITY" logo
+- "DAK SECURITY" logo
 - Navigation items: Who We Are, Services, Products, Our Clients, Resources, Contact
 - Mobile hamburger menu with smooth animations
 - Hover underline effects on nav links
@@ -298,7 +298,7 @@ The following can be added later:
 ## Notes
 
 - All content is based on AKS IT Services reference from `/research/` directory
-- Company name changed to "DAC SECURITY" throughout
+- Company name changed to "DAK SECURITY" throughout
 - **Light theme enforced** - No dark mode, perfect for government/enterprise
 - Minimalist design allows for easy future customization
 - No external animation libraries used - everything is pure CSS
@@ -327,7 +327,7 @@ The following can be added later:
 | File | Changes |
 |------|---------|
 | `globals.css` | Added CSS color variables, light theme enforcement, animations |
-| `layout.tsx` | Updated metadata for DAC Security, forced light mode |
+| `layout.tsx` | Updated metadata for DAK Security, forced light mode |
 | `page.tsx` | Composes all homepage components |
 
 ---

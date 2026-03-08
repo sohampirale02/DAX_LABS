@@ -1,6 +1,6 @@
-# DAC Security Website - Updated Guidelines
+# DAK Security Website - Updated Guidelines
 
-**Last Updated:** March 8, 2026  
+**Last Updated:** March 8, 2026
 **Session:** 2 (Services Page Completed)
 
 ---
@@ -303,8 +303,8 @@ All service content is based on AKS IT Services reference:
 - Methodology follows industry standard
 
 ### Placeholder Content Used
-- Company name: DAC Security (not AKS IT Services)
-- Contact info: Placeholder (contact@dacsecurity.com)
+- Company name: DAK Security (not AKS IT Services)
+- Contact info: Placeholder (contact@daksecurity.com)
 - Address: Placeholder (123 Security Boulevard, Tech City, TC 12345)
 - Phone: Placeholder (+1 (234) 567-890)
 

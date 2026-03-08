@@ -7,10 +7,10 @@ import ServiceIndustries from '../components/ServiceIndustries';
 import ServicesCTA from '../components/ServicesCTA';
 
 export const metadata = {
-  title: 'Our Services | DAC Security',
+  title: 'Our Services | DAK Security',
   description: 'Comprehensive cybersecurity solutions including Application Security Assessment, Network Security Assessment, Compliance and Data Privacy, Red Teaming, IoT Security, SOC Services, and Digital Forensic Services.',
   openGraph: {
-    title: 'Our Services | DAC Security',
+    title: 'Our Services | DAK Security',
     description: 'Comprehensive cybersecurity solutions for your digital infrastructure',
     type: 'website',
   },

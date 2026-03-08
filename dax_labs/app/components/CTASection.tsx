@@ -26,7 +26,7 @@ export default function CTASection() {
 
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="mailto:contact@dacsecurity.com"
+                href="mailto:contact@daksecurity.com"
                 className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-[var(--color-text-light)] bg-[var(--color-accent)] rounded-md hover:bg-[var(--color-accent-hover)] transition-all duration-300 transform hover:translate-y-[-2px] hover:shadow-lg"
               >
                 Contact Our Team

@@ -38,7 +38,7 @@ export default function Commitment() {
             OUR COMMITMENT TO YOUR SECURITY
           </h2>
           <p className="mt-4 text-lg text-[var(--color-text-secondary)] leading-relaxed">
-            At DAC Security, we are dedicated to safeguarding your digital infrastructure with 
+            At DAK Security, we are dedicated to safeguarding your digital infrastructure with
             comprehensive security solutions that evolve with the threat landscape.
           </p>
         </div>

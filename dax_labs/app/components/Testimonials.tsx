@@ -1,18 +1,18 @@
 const testimonials = [
   {
-    quote: "DAC Security transformed our approach to cybersecurity. Their proactive monitoring and rapid response capabilities have given us peace of mind and protected our critical infrastructure.",
+    quote: "DAK Security transformed our approach to cybersecurity. Their proactive monitoring and rapid response capabilities have given us peace of mind and protected our critical infrastructure.",
     author: "Rajesh Kumar",
     role: "CIO",
     company: "TechCorp Industries",
   },
   {
-    quote: "The team at DAC Security demonstrated exceptional expertise during our ISO 27001 certification journey. Their guidance was invaluable in achieving compliance.",
+    quote: "The team at DAK Security demonstrated exceptional expertise during our ISO 27001 certification journey. Their guidance was invaluable in achieving compliance.",
     author: "Priya Sharma",
     role: "Head of IT Security",
     company: "Global Finance Ltd",
   },
   {
-    quote: "We've partnered with DAC Security for over 5 years. Their dedication to keeping our systems secure and their responsive support team make them an trusted partner.",
+    quote: "We've partnered with DAK Security for over 5 years. Their dedication to keeping our systems secure and their responsive support team make them an trusted partner.",
     author: "Michael Chen",
     role: "CTO",
     company: "Innovate Solutions",

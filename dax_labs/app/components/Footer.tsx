@@ -43,7 +43,7 @@ export default function Footer() {
           <div className="lg:col-span-4">
             <a href="#" className="inline-block">
               <span className="text-xl font-bold tracking-tight text-[var(--color-text-primary)]">
-                DAC SECURITY
+                DAK SECURITY
               </span>
             </a>
             <p className="mt-4 text-[var(--color-text-secondary)] leading-relaxed">
@@ -157,8 +157,8 @@ export default function Footer() {
               <svg className="w-5 h-5 mr-3 text-[var(--color-text-muted)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              <a href="mailto:contact@dacsecurity.com" className="hover:text-[var(--color-accent)] transition-colors">
-                contact@dacsecurity.com
+              <a href="mailto:contact@daksecurity.com" className="hover:text-[var(--color-accent)] transition-colors">
+                contact@daksecurity.com
               </a>
             </div>
             <div className="flex items-center text-[var(--color-text-secondary)]">
@@ -175,7 +175,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="mt-8 pt-8 border-t border-[var(--color-border)] text-center">
           <p className="text-sm text-[var(--color-text-muted)]">
-            &copy; {currentYear} DAC Security. All rights reserved.
+            &copy; {currentYear} DAK Security. All rights reserved.
           </p>
         </div>
       </div>
