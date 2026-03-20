@@ -6,6 +6,14 @@ const footerLinks = {
     { name: 'News & Updates', href: '/#resources' },
     { name: 'Contact Us', href: '/#contact' },
   ],
+  products: [
+    { name: 'IT Security Products', href: '/products' },
+    { name: 'Partner Solutions', href: '/products' },
+    { name: 'Forensic Hardware', href: '/products' },
+    { name: 'Forensic Software', href: '/products' },
+    { name: 'Request Demo', href: '/#contact' },
+    { name: 'Get a Quote', href: '/#contact' },
+  ],
   services: [
     { name: 'Application Security Assessment', href: '/services' },
     { name: 'Network Security Assessment', href: '/services' },
@@ -104,8 +112,27 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Products Links */}
+          <div className="lg:col-span-2">
+            <h3 className="text-sm font-semibold text-[var(--color-text-primary)] tracking-wider uppercase">
+              Products
+            </h3>
+            <ul className="mt-4 space-y-3">
+              {footerLinks.products.map((link) => (
+                <li key={link.name}>
+                  <a
+                    href={link.href}
+                    className="text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors duration-200"
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Services Links */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-2">
             <h3 className="text-sm font-semibold text-[var(--color-text-primary)] tracking-wider uppercase">
               Our Services
             </h3>
@@ -124,7 +151,7 @@ export default function Footer() {
           </div>
 
           {/* Resources & Legal Links */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-2">
             <h3 className="text-sm font-semibold text-[var(--color-text-primary)] tracking-wider uppercase">
               Resources & Legal
             </h3>

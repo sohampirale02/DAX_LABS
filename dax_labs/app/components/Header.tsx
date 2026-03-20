@@ -5,7 +5,7 @@ import { useState } from 'react';
 const navItems = [
   { name: 'Who We Are', href: '/#who-we-are' },
   { name: 'Services', href: '/services', hasDropdown: true },
-  { name: 'Products', href: '/#products' },
+  { name: 'Products', href: '/products' },
   { name: 'Our Clients', href: '/#clients' },
   { name: 'Resources', href: '/#resources' },
   { name: 'Contact', href: '/#contact' },
