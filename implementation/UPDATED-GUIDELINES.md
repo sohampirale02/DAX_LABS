@@ -1,7 +1,7 @@
 # DAK Security Website - Updated Guidelines
 
-**Last Updated:** March 8, 2026
-**Session:** 2 (Services Page Completed)
+**Last Updated:** March 22, 2026
+**Session:** 3 (Products Page Completed)
 
 ---
 
@@ -9,12 +9,14 @@
 
 ### ✅ Completed Pages
 1. **Homepage** (`/`) - All sections complete
-2. **Services Page** (`/services`) - Fully implemented with:
-   - Hero section with breadcrumb
-   - 7 expandable service categories
-   - 5-step methodology section
-   - 10 industries served
-   - CTA section with statistics
+2. **Services Page** (`/services`) - Fully implemented
+3. **Products Page** (`/products`) - Fully implemented with:
+   - Hero section with breadcrumb and icon
+   - 12 IT Security Products grid
+   - 12 Partner companies grid
+   - 3 Forensic Hardware products
+   - 15 Forensic Software categories (accordion)
+   - CTA section with contact info
 
 ### 🔄 In Progress
 - None
@@ -22,9 +24,8 @@
 ### ⏳ Pending Pages
 1. **About Page** (`/about` or `/who-we-are`)
 2. **Contact Page** (`/contact`)
-3. **Products Page** (`/products`)
-4. **Resources Page** (`/resources`)
-5. **Clients Page** (`/clients`)
+3. **Resources Page** (`/resources`)
+4. **Clients Page** (`/clients`)
 
 ---
 
@@ -34,7 +35,7 @@
 dax_labs/
 ├── app/
 │   ├── components/
-│   │   ├── Header.tsx                ✅ MODIFIED - Services links to /services
+│   │   ├── Header.tsx                ✅ MODIFIED - Products links to /products
 │   │   ├── Hero.tsx                  ✅
 │   │   ├── Commitment.tsx            ✅
 │   │   ├── ServicesOverview.tsx      ✅ MODIFIED - Cards link to /services
@@ -42,14 +43,22 @@ dax_labs/
 │   │   ├── Certifications.tsx        ✅
 │   │   ├── Testimonials.tsx          ✅
 │   │   ├── CTASection.tsx            ✅
-│   │   ├── Footer.tsx                ✅ MODIFIED - Services list updated
+│   │   ├── Footer.tsx                ✅ MODIFIED - Added Products column
 │   │   ├── ServicesHero.tsx          ✅ NEW
 │   │   ├── ServicesDetail.tsx        ✅ NEW
 │   │   ├── ServicesMethodology.tsx   ✅ NEW
 │   │   ├── ServiceIndustries.tsx     ✅ NEW
-│   │   └── ServicesCTA.tsx           ✅ NEW
+│   │   ├── ServicesCTA.tsx           ✅ NEW
+│   │   ├── ProductsHero.tsx          ✅ NEW
+│   │   ├── ProductsCatalog.tsx       ✅ NEW
+│   │   ├── Partners.tsx              ✅ NEW
+│   │   ├── ForensicHardware.tsx      ✅ NEW
+│   │   ├── ForensicSoftware.tsx      ✅ NEW
+│   │   └── ProductsCTA.tsx           ✅ NEW
 │   ├── services/
 │   │   └── page.tsx                  ✅ NEW - Services page
+│   ├── products/
+│   │   └── page.tsx                  ✅ NEW - Products page
 │   ├── globals.css                   ✅
 │   ├── layout.tsx                    ✅
 │   └── page.tsx                      ✅
@@ -64,8 +73,8 @@ dax_labs/
 ### Header Navigation
 ```
 - Who We Are → /#who-we-are
-- Services → /services (CHANGED)
-- Products → /#products
+- Services → /services
+- Products → /products (CHANGED)
 - Our Clients → /#clients
 - Resources → /#resources
 - Contact → /#contact
@@ -78,6 +87,16 @@ dax_labs/
 - CTA buttons → /#contact (scrolls to contact on homepage)
 ```
 
+### Products Page Internal Navigation
+```
+- Home (breadcrumb) → /
+- IT Security Products → Scroll to section
+- Partners → Scroll to section
+- Forensic Hardware → Scroll to section
+- Forensic Software → Accordion expand/collapse
+- CTA buttons → /#contact (scrolls to contact on homepage)
+```
+
 ### Footer Navigation
 ```
 Company:
@@ -85,9 +104,17 @@ Company:
 - Our Team → /#who-we-are
 - Careers → /#resources
 - News & Updates → /#resources
-- Contact Us → /#contact (ADDED)
+- Contact Us → /#contact
 
-Our Services: (UPDATED - All link to /services)
+Products: (NEW - All link to /products)
+- IT Security Products
+- Partner Solutions
+- Forensic Hardware
+- Forensic Software
+- Request Demo
+- Get a Quote
+
+Our Services: (All link to /services)
 - Application Security Assessment
 - Network Security Assessment
 - Compliance and Data Privacy
@@ -275,18 +302,13 @@ npm start
 
 ### Priority 2 - Content Pages
 
-#### 3. Products Page (`/products`)
-- Product categories
-- Partner logos
-- Product cards
-
-#### 4. Resources Page (`/resources`)
+#### 3. Resources Page (`/resources`)
 - Blog listing
 - Case studies
 - Whitepapers
 - Research papers
 
-#### 5. Clients Page (`/clients`)
+#### 4. Clients Page (`/clients`)
 - Client logos grid
 - Testimonials carousel
 - Success stories
@@ -302,6 +324,13 @@ All service content is based on AKS IT Services reference:
 - Benefits are tailored to each service
 - Methodology follows industry standard
 
+### Products Page Content
+All product content is based on AKS IT Services reference:
+- 12 IT Security Products with descriptions and use cases
+- 12 Partner companies with specializations
+- 3 Forensic Hardware products with specifications
+- 15 Forensic Software categories with features
+
 ### Placeholder Content Used
 - Company name: DAK Security (not AKS IT Services)
 - Contact info: Placeholder (contact@daksecurity.com)
@@ -311,9 +340,10 @@ All service content is based on AKS IT Services reference:
 ### Content to Replace Later
 - Real company address
 - Actual phone numbers
-- Real client testimonials for services page
+- Real client testimonials
 - Actual case studies/examples
 - Team member photos and bios
+- Partner logos (currently text cards)
 
 ---
 
@@ -358,13 +388,14 @@ See: `research/` directory
 ## Important Notes for Next Agent
 
 1. **Services page is complete** - Do not modify unless fixing bugs
-2. **Header navigation is updated** - Services links to `/services`
-3. **Homepage service cards are updated** - Match AKS IT Services names
-4. **Footer services list is updated** - All 7 services listed
+2. **Products page is complete** - Do not modify unless fixing bugs
+3. **Header navigation is updated** - Services links to `/services`, Products links to `/products`
+4. **Footer is updated** - Added Products column with 6 links
 5. **Light mode is enforced** - Do not add dark mode
 6. **No external dependencies** - Use inline SVG for icons
 7. **CSS variables only** - No hardcoded colors
 8. **Build must pass** - Always run `npm run build` before marking complete
+9. **ForensicSoftware uses useState** - Client-side accordion, keep 'use client' directive
 
 ---
 
@@ -380,6 +411,7 @@ npm run dev
 # 3. Open browser
 # Homepage: http://localhost:3000
 # Services: http://localhost:3000/services
+# Products: http://localhost:3000/products
 
 # 4. Create new page (example: About)
 mkdir -p app/about
@@ -393,7 +425,7 @@ npm run build
 
 ---
 
-**Session Completed By:** AI Assistant  
-**Date:** March 8, 2026  
-**Status:** Services Page ✅ Complete  
+**Session Completed By:** AI Assistant
+**Date:** March 22, 2026
+**Status:** Products Page ✅ Complete
 **Next Priority:** About Page (`/about`) and Contact Page (`/contact`)
